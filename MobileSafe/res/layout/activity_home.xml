@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:text="@string/functionTab"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:background="#8866ff00"
+       />
+    
+     <com.niebiao.mobilesafe.ui.FocusedTextView
+		android:singleLine="true"
+		android:ellipsize="marquee"
+		android:textSize="18sp"
+		android:text="最新的手机卫士，快来下载，下载送美女,最新的手机卫士，快来下载，下载送美女"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        />
+    
+    <GridView 
+        android:id="@+id/gv_function"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:layout_marginTop="15dip"
+        android:verticalSpacing="10dip"/>
+    
+</LinearLayout>

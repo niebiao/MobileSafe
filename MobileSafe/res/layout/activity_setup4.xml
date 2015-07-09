@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+         android:text="4.恭喜您，设置完成"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:background="#8866ff00"
+       />
+ 		<LinearLayout 
+ 		    android:layout_width="fill_parent"
+ 		    android:layout_height="wrap_content"
+ 		    android:orientation="horizontal"
+ 		    android:layout_marginTop="5dip"
+ 		    android:layout_marginLeft="5dip">
+ 		    
+ 		    <CheckBox 
+ 		        android:id="@+id/cb_setup4_protected"
+ 		          android:layout_width="wrap_content"
+ 		        android:layout_height="wrap_content"
+ 		          android:text="您没用开启防盗保护"
+ 		        />
+ 		   <!--  <TextView 
+ 		        android:layout_width="wrap_content"
+ 		        android:layout_height="wrap_content"
+ 		          android:text="您没用开启防盗保护"
+ 		          android:textSize="16dip"
+ 		        android:gravity="center_horizontal"
+ 		        android:layout_marginLeft="5dip"/> -->
+ 		</LinearLayout>
+ 	    <LinearLayout 
+ 	        android:layout_width="match_parent"
+ 	        android:layout_height="wrap_content"
+ 	        android:orientation="horizontal"
+ 	        android:gravity="center_horizontal">
+ 	        <ImageView 
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:src="@android:drawable/presence_invisible"
+ 	           />
+ 	        <ImageView 
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:src="@android:drawable/presence_invisible"
+ 	           />
+ 	        <ImageView 
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:src="@android:drawable/presence_invisible"
+ 	           />
+ 	         <ImageView 
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:src="@android:drawable/presence_online"
+ 	           />
+ 	    </LinearLayout>
+ 	    <RelativeLayout 
+ 	        android:layout_width="fill_parent"
+ 	        android:layout_height="fill_parent">
+ 	        <ImageView 
+ 	            android:src="@drawable/phone"
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:layout_centerInParent="true"/>
+ 	       
+ 	         <Button 
+ 	            android:onClick="back"
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:background="@drawable/button"
+ 	          	   android:text="上一步"
+ 	            android:textColor="#000000"
+ 	           	   android:textSize="16dip"
+ 	            android:layout_alignParentLeft="true"
+ 	            android:layout_alignParentBottom="true"
+ 	            android:layout_marginBottom="10dip"
+ 	            android:layout_marginLeft="20dip"/>
+ 	          <Button 
+ 	            android:onClick="finished"
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:background="@drawable/button"
+ 	          	   android:text="设置完成"
+ 	            android:textColor="#000000"
+ 	           	   android:textSize="16dip"
+ 	            android:layout_alignParentRight="true"
+ 	            android:layout_alignParentBottom="true"
+ 	            android:layout_marginBottom="10dip"
+ 	            android:layout_marginRight="20dip"/>
+ 	    
+ 	    </RelativeLayout>
+</LinearLayout>

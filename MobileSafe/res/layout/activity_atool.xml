@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+      <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="center"
+          android:text="高级工具"
+        android:background="#8866ff00"
+       />
+
+      <TextView
+          android:clickable="true"
+          android:onClick="numberQuery"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dip"
+          android:layout_marginTop="10dip"
+          android:drawableLeft="@drawable/call_contact"
+          android:gravity="center_vertical"
+          	android:text="号码归属地查询"
+          android:textColor="#000000"
+          android:textSize="20sp" />
+      
+       <TextView
+          android:clickable="true"
+          android:onClick="smsBackup"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dip"
+          android:layout_marginTop="10dip"
+          android:drawableLeft="@drawable/sms"
+          android:gravity="center_vertical"
+            android:text="短信备份"
+          android:textColor="#000000"
+          android:textSize="20sp" />
+       
+        <TextView
+          android:clickable="true"
+          android:onClick="smsRestore"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dip"
+          android:layout_marginTop="10dip"
+          android:drawableLeft="@drawable/sms"
+          android:gravity="center_vertical"
+            android:text="短信还原"
+          android:textColor="#000000"
+          android:textSize="20sp" />
+      
+</LinearLayout>

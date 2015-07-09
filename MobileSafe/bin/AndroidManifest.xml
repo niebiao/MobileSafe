@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.niebiao.mobilesafe"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+     <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.niebiao.mobilesafe" />
+     <uses-permission android:name="android.permission.CALL_PHONE"/>
+     <uses-permission android:name="android.permission.READ_SMS"/>
+     <uses-permission android:name="android.permission.WRITE_SMS"/>
+     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+     <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+     
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+        <activity
+            android:name="com.niebiao.mobilesafe.SpalashAtivity"
+            android:label="@string/app_name"
+           >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.niebiao.mobilesafe.HomeActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.SettingActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.LostFindActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.Setup1Activity"/>
+        <activity android:name="com.niebiao.mobilesafe.Setup2Activity"/>
+        <activity android:name="com.niebiao.mobilesafe.Setup3Activity"/>
+        <activity android:name="com.niebiao.mobilesafe.Setup4Activity"/>
+        <activity android:name="com.niebiao.mobilesafe.AtoolActivity"/>
+         <activity android:name="com.niebiao.mobilesafe.NumberAddressQueryActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.SelectContactActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.CallSmsSafeActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.AppManageActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.TaskManagerActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.TaskClearSettingActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.TrafficManageActivity"/>
+        <activity android:name="com.niebiao.mobilesafe.ClearCacheActivity"/>
+        
+        <service android:name="com.niebiao.mobilesafe.service.GPSService"/>
+      	  <service android:name="com.niebiao.mobilesafe.service.AddressService"/>
+        <service android:name="com.niebiao.mobilesafe.service.CallSmsSafeService"/>
+        <service android:name="com.niebiao.mobilesafe.service.AutoClearService"/>
+        <service android:name="com.niebiao.mobilesafe.service.UpdateWidgetService"/>
+        
+        <receiver android:name="niebiao.mobilesafe.receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action  android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            </receiver>
+            <receiver android:name="niebiao.mobilesafe.receiver.SMSReceiver">
+            <intent-filter android:priority="1000">
+                <action  android:name="android.intent.action.SMS_RECEIVER"/>
+            </intent-filter>
+            </receiver>
+           <!-- 去电 -->   
+           <!--  <receiver android:name="com.niebiao.mobilesafe.receiver.OutCallReceiver">
+            <intent-filter>
+                <action  android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+            </receiver> -->
+            <!-- 设备管理 -->   
+        <receiver 
+            		  android:name="com.example.lockscreen.MyAdmin"  
+                  android:label="@string/app_name"  
+                  android:description="@string/app_name"  
+                  android:permission="android.permission.BIND_DEVICE_ADMIN">   
+                <meta-data android:name="android.app.device_admin"  
+                           android:resource="@xml/lock_screen" />   
+                   <intent-filter>   
+                        <action   
+                           android:name="android.app.action.DEVICE_ADMIN_ENABLED" />   
+                   </intent-filter>   
+        </receiver> 
+        
+        <receiver
+             android:name="com.niebiao.mobilesafe.receiver.MyWidget" >    
+      			<intent-filter>        
+          		 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />    
+     			 </intent-filter>    
+     			 <meta-data android:name="android.appwidget.provider"
+              	   android:resource="@xml/mywidget_info" />
+			</receiver>
+			<receiver 
+			    android:name="com.niebiao.mobilesafe.receiver.killAll">
+			    <intent-filter>
+			        <action android:name="com.niebiao.mobilesafe.killall"/>
+			    </intent-filter>
+			</receiver>
+    </application>
+
+</manifest>

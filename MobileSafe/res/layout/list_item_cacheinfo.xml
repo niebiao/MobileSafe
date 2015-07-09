@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginTop="5dip"
+    >
+    <ImageView 
+        android:id="@+id/iv_cache_icon"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:src="@drawable/delete_selector"
+        android:layout_centerVertical="true"
+        />
+    <TextView 
+        android:layout_toRightOf="@id/iv_cache_icon"
+        android:id="@+id/tv_cache_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="程序名称"
+        android:textSize="16dip"
+        android:textColor="#000000"
+        />
+    <TextView 
+        android:layout_toRightOf="@id/iv_cache_icon"
+        android:id="@+id/tv_cache_size"
+        android:layout_below="@id/tv_cache_name"
+        android:layout_marginTop="5dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="程序缓存"
+        />
+    <ImageView 
+        android:id="@+id/iv_cache_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_selector"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_centerVertical="true"
+        />
+<View 
+    android:layout_below="@id/iv_cache_icon"
+    android:layout_width="fill_parent"
+    android:layout_height="0.5dip"
+    android:background="#33000000"
+    android:layout_marginTop="5dip"/>
+</RelativeLayout>
+

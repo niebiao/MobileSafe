@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+         android:text="号码归属地查询"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:background="#8866ff00"
+       />
+ 	<EditText 
+ 	    android:id="@+id/et_number"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:hint="请输入号码"
+ 	    android:layout_marginLeft="5dip"
+ 	    android:layout_marginTop="10dip"
+ 	    android:layout_marginRight="5dip"
+ 	    />
+ 	<RelativeLayout 
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_marginTop="10dip">
+ 	    <Button 
+ 	    android:onClick="query"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentRight="true"
+ 	    android:layout_marginRight="20dip"
+ 	    android:background="@drawable/bbuton_danger_rounded"
+ 	    android:text="查询"/>
+ 	</RelativeLayout>
+ 	 <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="20dip"
+        android:gravity="center_horizontal"
+       />
+</LinearLayout>
